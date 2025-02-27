@@ -5,8 +5,8 @@ import Navbar from '../Navbar'
 import Lottie from 'lottie-react';
 import starfish from '../../../public/assets/lottie/starfish.json'
 import order from '../../../public/assets/lottie/order.json'
-import Image from 'next/image';
-import bubble from '../../../public/assets/landingpage/psd/bub.svg'
+// import Image from 'next/image';
+// import bubble from '../../../public/assets/landingpage/psd/bub.svg'
 import { gsap, Power3 } from 'gsap'
 
 const HeroSection = () => {
