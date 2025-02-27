@@ -18,20 +18,25 @@ const HeroSection = () => {
   const lottieRef = useRef();
 
   useEffect(() => {
+    if (typeof window === "undefined") return; // Ensure GSAP runs only on the client
+  
     const tl = gsap.timeline();
-
-    gsap.set([h1Ref.current, ...h2Ref.current.children, btnRef.current], { opacity: 0, y: 100, skewX: 50 });
-
-    tl.to([h1Ref.current, ...h2Ref.current.children, btnRef.current], {
-      duration: 1,
-      opacity: 1,
-      y: 0, // Move to the original position
-      skewX: 0, // Reset skewY back to normal
-      stagger: 0.3, // Animate one after another
-      ease: Power3.easeOut,
-      delay: 2.5,
-    });
+  
+    if (h1Ref.current && h2Ref.current && btnRef.current) {
+      gsap.set([h1Ref.current, ...h2Ref.current.children, btnRef.current], { opacity: 0, y: 100, skewX: 50 });
+  
+      tl.to([h1Ref.current, ...h2Ref.current.children, btnRef.current], {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        skewX: 0,
+        stagger: 0.3,
+        ease: Power3.easeOut,
+        delay: 2.5,
+      });
+    }
   }, []);
+  
 
 
   const handleMouseEnter = () => {
