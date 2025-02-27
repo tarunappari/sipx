@@ -1,10 +1,12 @@
-"use client"
+"use client";
 import styled from "styled-components";
-import HeroSection from './components/LandingPage/HeroSection'
-import AboutUs from './components/LandingPage/AboutUs'
-import Products from './components/LandingPage/Products'
-import Composition from './components/LandingPage/Composition'
+import dynamic from "next/dynamic";
 
+// Dynamically import components to prevent SSR issues
+const HeroSection = dynamic(() => import("./components/LandingPage/HeroSection"), { ssr: false });
+const AboutUs = dynamic(() => import("./components/LandingPage/AboutUs"), { ssr: false });
+const Products = dynamic(() => import("./components/LandingPage/Products"), { ssr: false });
+const Composition = dynamic(() => import("./components/LandingPage/Composition"), { ssr: false });
 
 export default function Home() {
   return (
@@ -17,7 +19,4 @@ export default function Home() {
   );
 }
 
-
-let PageContainer = styled.div`
-`
-
+let PageContainer = styled.div``;

@@ -2,12 +2,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components';
 import Navbar from '../Navbar'
-import Lottie from 'lottie-react';
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import starfish from '../../../public/assets/lottie/starfish.json'
 import order from '../../../public/assets/lottie/order.json'
 // import Image from 'next/image';
 // import bubble from '../../../public/assets/landingpage/psd/bub.svg'
-import { gsap, Power3 } from 'gsap'
 
 const HeroSection = () => {
 
@@ -19,24 +19,27 @@ const HeroSection = () => {
   const lottieRef = useRef();
 
   useEffect(() => {
-    if (typeof window === "undefined") return; // Ensure GSAP runs only on the client
+    if (typeof window === "undefined") return; // Prevent GSAP from running on the server
   
-    const tl = gsap.timeline();
+    import("gsap").then(({ gsap, Power3 }) => {
+      const tl = gsap.timeline();
   
-    if (h1Ref.current && h2Ref.current && btnRef.current) {
-      gsap.set([h1Ref.current, ...h2Ref.current.children, btnRef.current], { opacity: 0, y: 100, skewX: 50 });
+      if (h1Ref.current && h2Ref.current && btnRef.current) {
+        gsap.set([h1Ref.current, ...h2Ref.current.children, btnRef.current], { opacity: 0, y: 100, skewX: 50 });
   
-      tl.to([h1Ref.current, ...h2Ref.current.children, btnRef.current], {
-        duration: 1,
-        opacity: 1,
-        y: 0,
-        skewX: 0,
-        stagger: 0.3,
-        ease: Power3.easeOut,
-        delay: 2.5,
-      });
-    }
+        tl.to([h1Ref.current, ...h2Ref.current.children, btnRef.current], {
+          duration: 1,
+          opacity: 1,
+          y: 0,
+          skewX: 0,
+          stagger: 0.3,
+          ease: Power3.easeOut,
+          delay: 2.5,
+        });
+      }
+    });
   }, []);
+  
   
 
 
