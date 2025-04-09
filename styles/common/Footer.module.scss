@@ -1,0 +1,44 @@
+.container {
+  height: 30vh;
+  background-color: var(--head);
+  color: var(--parawhite);
+  padding: 3rem 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  & > div{
+    width: 100%;
+  }
+
+  .topContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &>div{
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  .bottomContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &>div{
+      display: flex;
+    }
+  }
+
+  img{
+    width: 10rem;
+  }
+
+  svg{
+    height: 2rem;
+  }
+}
