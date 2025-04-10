@@ -1,5 +1,7 @@
+"use cient"
 import React from 'react'
-import Lottie from 'lottie-react';
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import smallwave from '@/public/assets/lottie/smallwave.json'
 import community from '@/public/assets/lottie/community.json'
 import sustainability from '@/public/assets/lottie/sustainability.json'

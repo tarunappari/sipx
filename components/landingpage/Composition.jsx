@@ -1,5 +1,7 @@
+"use client";
 import React from 'react'
-import Lottie from 'lottie-react';
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import smallwave from '@/public/assets/lottie/smallwave.json'
 import superhero from '@/public/assets/lottie/superhero.json'
 import bottle from '@/public/assets/landingpage/croppedBottle.png'
