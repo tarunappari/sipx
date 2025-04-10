@@ -2,7 +2,6 @@
 import React from 'react'
 import dynamic from "next/dynamic";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
-import Lottie from 'lottie-react';
 import styles from '@/styles/landingpage/HeroSection.module.scss'
 import order from '@/public/assets/lottie/order.json'
 import Navbar from '../common/Navbar';
