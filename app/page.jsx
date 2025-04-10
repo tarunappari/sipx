@@ -1,3 +1,4 @@
+"use client"
 import HeroSection from "@/components/landingpage/HeroSection";
 import Journey from "@/components/landingpage/Journey";
 import Products from "@/components/landingpage/Products";
