@@ -1,33 +1,29 @@
 "use client"
 import React from 'react'
-import herosection from '@/styles/landingpage/HeroSection.module.scss'
-import dynamic from "next/dynamic";
-import starfish from '@/public/assets/lottie/starfish.json'
+import Lottie from 'lottie-react';
+import styles from '@/styles/landingpage/HeroSection.module.scss'
 import order from '@/public/assets/lottie/order.json'
 import Navbar from '../common/Navbar';
-import Lottie from 'lottie-react';
+
 
 const HeroSection = () => {
     return (
-        <div className={herosection.container}>
-            <div className={herosection.infoContainer}>
+        <div className={styles.container}>
+            <div className={styles.infoContainer}>
                 <Navbar />
-                <div className={herosection.herosection}>
-                    <div className={herosection.leftContainer}>
-                        <h1 className={herosection.h1}>At Sipx, we don’t just sell water</h1>
+                <div className={styles.herosection}>
+                    <div className={styles.leftContainer}>
+                        <h1 className={styles.h1}>At Sipx, we don’t just sell water</h1>
                         <div>
-                            <h2 className={herosection.h2} >we <span>deliver</span> </h2>
-                            <h2 className={herosection.h2} >trust, health, and sustainability</h2>
-                            <h2 className={herosection.h2} >in every <span>bottle.</span></h2>
+                            <h2 className={styles.h2} >we <span>deliver</span> </h2>
+                            <h2 className={styles.h2} >trust, health, and sustainability</h2>
+                            <h2 className={styles.h2} >in every <span>bottle.</span></h2>
                         </div>
-                        <div className={herosection.orderBtn}
+                        <div className={styles.orderBtn}
                         >
-                            <button className={herosection.button}>Order Now</button>
-                            <span className={herosection.span}><Lottie loop={false} animationData={order} autoplay={false} /></span>
+                            <button className={styles.button}>Order Now</button>
+                            <span className={styles.span}><Lottie loop={false} animationData={order} autoplay={false} /></span>
                         </div>
-                    </div>
-                    <div className={herosection.blobb}>
-                        {/* <Image src={bubble} alt='nt' width={250}/> */}
                     </div>
                 </div>
             </div>
