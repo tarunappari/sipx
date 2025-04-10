@@ -36,9 +36,15 @@
 
   img{
     width: 10rem;
+    height: 5rem;
   }
 
   svg{
     height: 2rem;
+  }
+
+  a{
+    text-decoration: none;
+    color: var(--parawhite);
   }
 }

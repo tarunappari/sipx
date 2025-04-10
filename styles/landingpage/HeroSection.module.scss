@@ -50,16 +50,18 @@
       gap: 0.5rem;
       border: 4px solid #c26631;
       background-color:  #c26631;
+      padding-left:0.2rem;
       padding-right: 0.7rem;
       border-radius: 2rem;
       cursor: pointer;
 
       .button {
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 700;
         background-color: #e6f6fd;
-        padding: 0.3rem 1.5rem;
+        padding: 0.5rem 1.5rem;
         border-radius: 2rem;
+        border: none;
       }
 
       .span {
