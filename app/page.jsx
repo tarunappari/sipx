@@ -11,8 +11,8 @@ export default function Home() {
     <div>
       <HeroSection />
       <Journey />
-      <Composition />
       <Products />
+      <Composition />
       <Footer />
     </div>
   );

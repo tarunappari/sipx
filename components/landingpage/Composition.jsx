@@ -11,15 +11,15 @@ import Image from 'next/image';
 const Composition = () => {
     return (
         <div className={styles.container}>
+            <div className={styles.title}>
+                <h2>Water Composition – The Power Within Every Drop</h2>
+                <p>At Sipx, every drop of water isn’t just pure—it’s infused with strength, energy, and balance, much like the hidden power within a hero. Our carefully balanced mineral composition fuels your body, ensuring optimal hydration and peak performance, just like a superhero ready to take on the world.</p>
+            </div>
             <div className={styles.homeBg}>
                 <Lottie loop={true} animationData={smallwave} />
             </div>
-            <div className={styles.leftContainer}>
-                <div className={styles.title}>
-                    <h2>Water Composition – The Power Within Every Drop</h2>
-                    <p>At Sipx, every drop of water isn’t just pure—it’s infused with strength, energy, and balance, much like the hidden power within a hero. Our carefully balanced mineral composition fuels your body, ensuring optimal hydration and peak performance, just like a superhero ready to take on the world.</p>
-                </div>
-                <div className={styles.composition}>
+            <div className={styles.infoContainer}>
+                <div className={styles.leftContainer}>
                     <div className={styles.first}>
                         <div>
                             <h1>Magnesium (Mg²⁺)  </h1>
@@ -35,7 +35,7 @@ const Composition = () => {
                         </div>
                     </div>
                     <div className={styles.second}>
-                        <Image src={bottle} alt='img' />
+                        <Lottie loop={true} animationData={superhero} />
                     </div>
                     <div className={styles.third}>
                         <div>
@@ -52,9 +52,9 @@ const Composition = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className={styles.rightContainer}>
-                <Lottie loop={true} animationData={superhero} />
+                <div className={styles.superHero}>
+                    <Lottie loop={true} animationData={superhero} />
+                </div>
             </div>
         </div>
     )

@@ -5,6 +5,8 @@
   padding: 1rem 3rem;
   background-color: transparent;
   z-index: 9;
+  width: 99.7vw;
+  overflow: hidden;
 
   .rightContainer {
     display: flex;
@@ -50,5 +52,25 @@
   .active::after {
     width: 100%;
     background-color: var(--black);
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .navContainer {
+    padding: 2rem 0.5rem;
+    .rightContainer {
+      gap: 0.75rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .navContainer {
+    padding: 2rem 0.5rem;
+    flex-direction: column;
+    gap: 1rem;
+    .rightContainer {
+      gap: 0.5rem;
+    }
   }
 }

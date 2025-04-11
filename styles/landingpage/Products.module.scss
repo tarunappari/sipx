@@ -1,7 +1,10 @@
 .container {
   height: 100vh;
-  display: grid;
-  grid-template-rows: 30% 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
   background-color: #ffce7f;
   background-position: fixed;
   .topContainer {
@@ -9,6 +12,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 0.5rem;
     h2 {
       font-size: 3rem;
     }
@@ -30,15 +34,100 @@
         overflow: hidden;
         border-radius: 1rem;
 
-        img{
+        img {
           height: 30rem;
           width: 20rem;
         }
       }
-      h3{
+      h3 {
         padding: 1rem;
         text-align: center;
         font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 820px) and (max-width: 1799px) {
+  .container {
+    .topContainer {
+      h2 {
+        font-size: 2.8rem;
+      }
+      p {
+        font-size: 1.1rem;
+        padding: 0 8rem;
+      }
+    }
+
+    .bottomContainer {
+      .card {
+        .imgContainer {
+          height: 22.5rem;
+          width: 17.5rem;
+          overflow: hidden;
+          border-radius: 1rem;
+
+          img {
+            height: 22.5rem;
+            width: 17.5rem;
+          }
+        }
+        h3 {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 721px) and (max-width: 950px) {
+  .container {
+    .bottomContainer {
+      .card {
+        .imgContainer {
+          height: 18.5rem;
+          width: 13.5rem;
+
+          img {
+            height: 18.5rem;
+            width: 13.5rem;
+          }
+        }
+        h3 {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .container {
+    padding: 1rem;
+    height: auto;
+
+    .topContainer {
+      p {
+        padding: 0 1rem;
+      }
+    }
+
+    .bottomContainer {
+      flex-direction: column;
+      .card {
+        .imgContainer {
+          height: 18.5rem;
+          width: 13.5rem;
+
+          img {
+            height: 18.5rem;
+            width: 13.5rem;
+          }
+        }
+        h3 {
+          font-size: 1rem;
+        }
       }
     }
   }

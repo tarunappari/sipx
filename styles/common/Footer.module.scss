@@ -1,5 +1,5 @@
 .container {
-  height: 30vh;
+  height: 35vh;
   background-color: var(--head);
   color: var(--parawhite);
   padding: 3rem 7rem;
@@ -7,44 +7,87 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  gap: 2rem;
+  width: 99.7vw;
+  overflow: hidden;
 
-  & > div{
+  .phoneLogo{
+    display: none;
+  }
+
+  & > div {
     width: 100%;
   }
 
-  .topContainer{
+  .topContainer {
     display: flex;
     justify-content: space-around;
     align-items: center;
 
-    &>div{
+    & > div {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 1rem;
     }
   }
 
-  .bottomContainer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &>div{
-      display: flex;
-    }
+  .bottomContainer {
+    width: 97vw;
+    font-size: 0.9rem;
   }
 
-  img{
+  img {
     width: 10rem;
     height: 5rem;
   }
 
-  svg{
+  svg {
     height: 2rem;
   }
 
-  a{
+  a {
     text-decoration: none;
     color: var(--parawhite);
+  }
+}
+
+@media only screen and (max-width: 806px) {
+  .container {
+    padding: 2rem 3rem;
+    height: 25vh;
+    img {
+      width: 13rem;
+      height: 6rem;
+    }
+
+    .topContainer{
+      justify-content: space-between;
+    }
+  }
+}
+
+@media only screen and (max-width: 626px) {
+  .container {
+    padding: 2rem 3rem;
+    height: 40vh;
+    img {
+      width: 13rem;
+      height: 6rem;
+    }
+
+    .phoneLogo{
+      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .topContainer{
+      justify-content: space-between;
+
+      .logo{
+        display: none;
+      }
+    }
   }
 }
