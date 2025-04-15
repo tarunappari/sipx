@@ -1,4 +1,7 @@
+@import "tailwindcss";
+// @import "tw-animate-css";
 
+// @custom-variant dark (&:is(.dark *));
 
 @font-face {
   font-family: "outfit";
@@ -14,7 +17,6 @@
   font-style: normal;
 }
 
-
 :root {
   --lightblue: #bee8ff;
   --darkblue: #9bdcff;
@@ -25,8 +27,6 @@
   --white: #ffffff;
   --black: #171717;
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -56,6 +56,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
 }
 
 html {
@@ -152,7 +154,6 @@ p {
   font-family: "nunito", sans-serif;
   color: var(--para);
 }
-
 
 img,svg{
   transition: 0.2s all;

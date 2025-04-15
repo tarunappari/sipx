@@ -11,7 +11,6 @@ import Image from 'next/image';
 const Navbar = ({text}) => {
 
     const pathname = usePathname();
-    console.log(text);
     
 
     return (
@@ -29,11 +28,8 @@ const Navbar = ({text}) => {
                 <Link href="/about" className={pathname === "/about" ? styles.active : ""}>
                     About
                 </Link>
-                <Link href="/contact" className={pathname === "/contact" ? styles.active : ""}>
-                    Contact
-                </Link>
-                <Link href="/certificates" className={pathname === "/certificates" ? styles.active : ""}>
-                    Certificates
+                <Link href="/reports" className={pathname === "/reports" ? styles.active : ""}>
+                    Lab & Reports
                 </Link>
             </div>
         </div>
