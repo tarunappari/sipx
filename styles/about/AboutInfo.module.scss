@@ -1,0 +1,109 @@
+.AboutInfoContainer {
+  max-width: 100vw;
+  overflow: hidden;
+
+  .info {
+    padding: 2rem;
+    margin: 2rem;
+
+    p {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+  }
+
+  .approach {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 65vh;
+    overflow: hidden;
+  }
+
+  .leafBg {
+    background: url("/assets/about/sideView.webp") center/cover no-repeat fixed
+      border-box;
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+  }
+
+  .madeToLastContainer {
+    grid-template-columns: 65% 35%;
+  }
+
+  .last {
+    background: url("/assets/about/tarun.webp") center/cover no-repeat fixed
+      border-box;
+    position: relative;
+    height: 70vh;
+  }
+
+  .aboutInfoImgContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+.centeringAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 4rem;
+  background-color: var(--head);
+
+  h1 {
+    font-size: 2.2rem;
+    color: var(--white);
+  }
+  p {
+    font-size: 1.2rem;
+    color: var(--parawhite);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .AboutInfoContainer {
+    .info {
+      padding: 1.5rem;
+      margin: 0rem;
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    .approach {
+      grid-template-columns: 100%;
+      height: 80vh;
+      grid-template-rows: 55% 45%;
+    }
+
+    .madeToLastContainer {
+      grid-template-columns: 100%;
+      grid-template-rows: 45% 55%;
+    }
+
+    .last {
+      background-position: -20rem 0rem;
+    }
+  }
+
+  .centeringAbout {
+    gap: 1rem;
+    padding: 1.5rem;
+
+    h1 {
+      font-size: 2rem;
+      color: var(--white);
+      text-align: center;
+    }
+    p {
+      font-size: 1.1rem;
+      color: var(--parawhite);
+      text-align: center;
+    }
+  }
+}

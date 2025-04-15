@@ -3,8 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 3rem;
-  background-color: transparent;
-  z-index: 9;
+  z-index: 999;
   width: 99.7vw;
   overflow: hidden;
 
@@ -52,6 +51,34 @@
   .active::after {
     width: 100%;
     background-color: var(--black);
+  }
+
+  .logoContainer:hover::after {
+    width: 0 !important;
+  }
+
+  .logoImg {
+    width: 10rem;
+    height: 4.5rem;
+  }
+
+  .colorWhite{
+
+    a{
+      color: var(--white);
+    }
+
+    a::after{
+      background-color: var(--white);
+    }
+
+    .active {
+      color: var(--white);
+    }
+
+    .active::after {
+      background-color: var(--white);
+    }
   }
 }
 

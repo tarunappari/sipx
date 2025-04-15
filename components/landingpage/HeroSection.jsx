@@ -11,7 +11,7 @@ const HeroSection = () => {
     return (
         <div className={styles.container}>
             <div className={styles.infoContainer}>
-                <Navbar />
+                <Navbar text={'home'}/>
                 <div className={styles.herosection}>
                     <div className={styles.leftContainer}>
                         <h1 className={styles.h1}>At Sipx, we don’t just sell water</h1>
