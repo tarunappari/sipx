@@ -14,7 +14,7 @@ const AboutInfo = () => {
             </div>
             <div className={styles.approach}>
                 <div className={`${styles.aboutInfoImgContainer}`}>
-                    <Image src={leavesImg} alt='img' layout='fill' objectFit='cover' objectPosition='bottom' />
+                    <Image src={leavesImg} alt='img' layout='fill' objectFit='cover' objectPosition='center' />
                 </div>
                 <div className={styles.centeringAbout}>
                     <FadeInWhenVisible direction='right' delay={0.5}>
