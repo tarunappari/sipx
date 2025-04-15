@@ -11,7 +11,7 @@
   .infoContainer {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 1rem;
     flex-grow: 1;
   }
@@ -107,13 +107,13 @@
   .container {
     .imgsContainer {
       .firstImg {
-        width: 22rem;
-        height: 17rem;
+        width: 20rem;
+        height: 15em;
       }
 
       .secImg {
-        width: 15rem;
-        height: 15rem;
+        width: 12.5rem;
+        height: 12.5rem;
       }
     }
 
@@ -124,7 +124,7 @@
     }
 
     p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       padding: 1rem 1rem;
     }
   }
