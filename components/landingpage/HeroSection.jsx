@@ -11,7 +11,7 @@ const HeroSection = () => {
     return (
         <div className={styles.container}>
             <div className={styles.infoContainer}>
-                <Navbar text={'home'}/>
+                <Navbar text={'home'} />
                 <div className={styles.herosection}>
                     <div className={styles.leftContainer}>
                         <h1 className={styles.h1}>At Sipx, we don’t just sell water</h1>
@@ -22,12 +22,17 @@ const HeroSection = () => {
                         </div>
                         <div className={styles.orderBtn}
                         >
-                            <button className={styles.button}>Order Now</button>
-                            <span className={styles.span}><Lottie loop={false} animationData={order} autoplay={false} /></span>
-                        </div>
+                            <button className={styles.button}
+                                onClick={() =>
+                                    window.open(
+                                        'https://wa.me/917095427959?text=Hi%2C%20I%20saw%20your%20website%20and%20wanted%20to%20connect!',
+                                        '_blank'
+                                    ) }> Order Now</button>
+                        <span className={styles.span}><Lottie loop={false} animationData={order} autoplay={false} /></span>
                     </div>
                 </div>
             </div>
+        </div>
             {/* <div className={herosection.bottomContainer}>
       <div className={herosection.block1}>
         <h3>water is</h3>
@@ -36,7 +41,7 @@ const HeroSection = () => {
       <div className="block2"></div>
       <div className="block3"></div>
     </div> */}
-        </div>
+        </div >
     )
 }
 

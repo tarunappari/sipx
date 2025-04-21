@@ -1,3 +1,4 @@
+
 import Footer from '@/components/common/Footer'
 import Certificates from '@/components/lab/Certificates'
 import HeroSection from '@/components/lab/HeroSection'
